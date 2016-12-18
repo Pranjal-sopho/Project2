@@ -15,13 +15,23 @@
     {
         if(empty($_POST["username"])){
             apologize("Username not filled");
-        }else if(empty ($_POST["password"])){
-            apologize("Password not filled"):
+        }
+        else if(empty($_POST["password"])){
+            apologize("Password not filled");
         }
         else if($_POST["password"] != $_POST["confirmation"]){
             apologize("your passwords don't match please try again");
         }
-        
+        else if(query("INSERT INTO users (username, hash, cash) VALUES(?, ?, 10000.00)", $_POST["username"], crypt($_POST["password"])) === false){
+			apologize('Username already exists');
+		}
+		else{
+			// insert the new user into the database
+			$rows = query("SELECT LAST_INSERT_ID() AS id");
+			$id = $rows[0]["id"];
+			$_SESSION["id"] = $id; 
+			redirect("index.php");
+		}
     }
 
 ?>
