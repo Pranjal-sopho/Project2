@@ -5,19 +5,19 @@
     }
     else if($_SERVER["REQUEST_METHOD"] == "POST"){
         if(empty($_POST["symbol"])){
-            echo "Please enter a symbol!"; 
+            apologise( "Please enter a symbol!"); 
         }
         else {
             $stock = lookup($_POST["symbol"]);
             $shares = CS50::query("SELECT shares FROM portfolios WHERE user_id = ? AND symbol = ?", $_SESSION["id"], $_POST["symbol"]);
             if(!$stock){
-                echo "Invalid Symbol!";
+                apologize("Invalid Symbol!");
             }
             else if(!$shares){
-                echo "You do not possess any shares of this company!";
+                apologise("You do not possess any shares of this company!");
             }
             else if($_POST["num_shares"] > $shares[0]["shares"]){
-                echo "You don't have that many shares of this company!";
+                apologise("You don't have that many shares of this company!");
             }
             else {
                 CS50::query("UPDATE portfolios SET shares = shares - {$_POST["num_shares"]} WHERE user_id = ? AND symbol = ?", $_SESSION["id"], strtoupper($_POST["symbol"]));
