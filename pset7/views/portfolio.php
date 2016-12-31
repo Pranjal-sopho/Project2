@@ -1,3 +1,7 @@
+<?php if(empty($positions)): ?>
+<h4>You have no shares currently!</h4>
+<?php    echo ("Current Balance : $" . number_format($cash, 2));  ?>
+<?php else: ?>
 <div class="container">
     <table class="table">
 
@@ -9,17 +13,18 @@
       </tr>
 
     <?php foreach ($positions as $position): ?>
-    
+        <?php if($position["shares"] > 0):?> 
         <tr>
             <td align="left"><?= $position["symbol"] ?></td>
             <td align="left"><?= $position["shares"] ?></td>
             <td align="left"><?= number_format($position["price"], 2) ?></td>
             <td align="left"><?= number_format($position["price"]*$position["shares"], 2) ?></td>
         </tr>
-
+        <?php endif;?>
     <?php endforeach ?>
         
 
 </table>
-<?php    echo ("Current Balance : " . number_format($cash, 2));  ?>
+<?php    echo ("Current Balance : $" . number_format($cash, 2));  ?>
 </div>
+<?php endif; ?>

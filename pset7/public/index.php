@@ -1,27 +1,25 @@
 <?php
     // configuration
-    require("../includes/config.php"); 
-    // render portfolio
+    require("../includes/config.php");
+    
+    $rows = CS50 :: query("SELECT * FROM portfolios WHERE user_id = ?", $_SESSION["id"]);
+    
     $positions = [];
-    
-    $id = $_SESSION["id"];
-    
-    $rows = CS50::query("SELECT * FROM portfolios WHERE user_id = ?", $id);
-    
     foreach ($rows as $row)
     {
-        $check = lookup($row["symbol"]);
-        if ($check)
+        $stock = lookup($row["symbol"]);
+        if ($stock !== false)
         {
             $positions[] = [
-                "name" => $check["name"],
-                "price" => $check["price"],
-                "symbol" => $row["symbol"],
-                "shares" => $row["shares"]
+                "name" => $stock["name"],
+                "price" => $stock["price"],
+                "shares" => $row["shares"],
+                "symbol" => $row["symbol"]
             ];
         }
     }
-    $cur_row = CS50::query("SELECT * FROM users WHERE id = ?", $id);
-    $cash = $cur_row[0]["cash"];
-    render("portfolio.php", ["positions" => $positions, "cash" => $cash, "title" => "Portfolio"]);
+    
+    $cash = CS50 :: query("SELECT cash FROM users WHERE id = ?", $_SESSION["id"]);
+    // render portfolio
+    render("portfolio.php", ["title" => "Portfolio", "cash" => $cash[0]["cash"], "positions" => $positions]);
 ?>
