@@ -7,7 +7,9 @@
             <input autocomplete="off" class="form-control" name="num_shares" placeholder="Shares" type="text"/>
         </div>
         <div class="form-group">
-            <button class="btn btn-default" type="submit">Buy</button>
+            <button class="btn btn-default" type="submit">
+            <span aria-hidden="true" class="glyphicon glyphicon-tags"></span>
+            Buy</button>
         </div>
     </fieldset>
 </form>
