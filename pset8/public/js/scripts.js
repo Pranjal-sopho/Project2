@@ -108,7 +108,7 @@ function configure()
         source: search,
         templates: {
             empty: "no places found yet",
-            suggestion: _.template("<p>TODO</p>")
+            suggestion: _.template("<p><%- place_name %>, <%- admin_name1 %>, <font color='grey' font-weight='bold'><%- postal_code %></font></p>")
         }
     });
 
