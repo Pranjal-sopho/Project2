@@ -48,7 +48,7 @@ $(function() {
     // options for map
     // https://developers.google.com/maps/documentation/javascript/reference#MapOptions
     var options = {
-        center: {lat: 28.019094, lng: 75.893536}, // Nalpur, khetri, rajasthan, India <3 
+        center: {lat: 28.0214, lng: 75.8947}, // Nalpur, khetri, rajasthan, India <3 	
         disableDefaultUI: true,
         mapTypeId: google.maps.MapTypeId.ROADMAP,
         maxZoom: 14,
@@ -108,7 +108,7 @@ function configure()
         source: search,
         templates: {
             empty: "no places found yet",
-            suggestion: _.template("<p>TODO</p>")
+            suggestion: _.template("<p><font font-weight='bold'> <%- place_name %>, <%- admin_name1 %>, <%- postal_code %></font></p>")
         }
     });
 
