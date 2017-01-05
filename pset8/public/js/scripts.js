@@ -48,7 +48,7 @@ $(function() {
     // options for map
     // https://developers.google.com/maps/documentation/javascript/reference#MapOptions
     var options = {
-        center: {lat: 27.8973, lng: 76.3956}, // Stanford, California
+        center: {lat: 37.4236, lng: -122.1619}, // Stanford, California
         disableDefaultUI: true,
         mapTypeId: google.maps.MapTypeId.ROADMAP,
         maxZoom: 14,
@@ -108,7 +108,7 @@ function configure()
         source: search,
         templates: {
             empty: "no places found yet",
-            suggestion: _.template("<p><%- place_name %>, <%- admin_name1 %>, <font color='grey' font-weight='bold'><%- postal_code %></font></p>")
+            suggestion: _.template("<p>TODO</p>")
         }
     });
 
