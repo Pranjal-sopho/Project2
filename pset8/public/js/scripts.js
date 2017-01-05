@@ -48,7 +48,7 @@ $(function() {
     // options for map
     // https://developers.google.com/maps/documentation/javascript/reference#MapOptions
     var options = {
-        center: {lat: 37.4236, lng: -122.1619}, // Stanford, California
+        center: {lat: 28.019094, lng: 75.893536}, // Nalpur, khetri, rajasthan, India <3 
         disableDefaultUI: true,
         mapTypeId: google.maps.MapTypeId.ROADMAP,
         maxZoom: 14,
