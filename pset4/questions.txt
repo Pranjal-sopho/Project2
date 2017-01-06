@@ -1,0 +1,31 @@
+0.  BMP: 32 bit color i.e  over 4 billion.
+    GIF: 8 bits or 256 colors.
+    JPEG: 24 bit or 16 million.
+    PNG: 24 bit or 16 million.
+1.  GIF
+2.  Lossless compression maintains both states which are recoverable from each other but lossy compression loses some part of it while compression which cannot be retrieved
+3.  JPEG
+4.  It's name first character gets modifies to show that file has been deleted and the respective space can be recycled and then file's data is never touched.
+5.  Overwrite the disk so that the space ocuupied previously by files gets recycled.
+6.  It's a set of definitions which defines ints of custom sizes to show sizes or widths etc.
+7.  It lets us define the size of int for various purposes like u_int32_t means that thwe size of the int is 32 bits.
+8.  BYTE is 1 byte
+	DWORD is 4 bytes
+	LONG is 4 bytes
+	WORD is 2 bytes
+
+9.  in hex : 0x424d this is stored in bftype
+10. bfsize denotes the full size of the bmp file and bisize denotes the info size i.e 40 bytes of the bmp file.
+11. If biHeight is negative it means that bitmap is a bottom up DIB which originates from bottom left corner.
+12. The biBitCount member of the BITMAPINFOHEADER structure determines the number of
+	bits that define each pixel and the maximum number of colors in the bitmap
+13. when it's unable to find the file it will return NULL
+14. Because it specifies how many elements you want to read, and we're always
+    reading a struct so we only need 1 struct.
+15. The padding would be 3, because 3 pixels * 3 bytes per pixel + 3 padding = 12,
+    which is a multiple of 4 which is required.
+16. fseek skips over padding and looks for the next pixel that might matter to us.
+17. An integer constant which, when used as the 'whence' argument to the
+    fseek or fseeko function, specifies that the offset provided is relative to
+    the current file position.
+18. Rick Astley
