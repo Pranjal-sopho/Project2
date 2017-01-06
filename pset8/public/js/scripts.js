@@ -54,7 +54,7 @@ $(function() {
         maxZoom: 14,
         panControl: true,
         styles: styles,
-        zoom: 13,
+        zoom: 14,
         zoomControl: true
     };
 
@@ -87,6 +87,10 @@ function addMarker(place)
         title: 'PIN code: ' + place.postal_code // some personal touch
     });
     
+    google.maps.event.addListener(marker, 'click', function(){
+    	showInfo(marker, content);
+    });
+    
     var content = '<ul>\n';
     var query = place.place_name;
     var parameters = {
@@ -111,11 +115,6 @@ function addMarker(place)
     })
     .fail(function(jqXHR, textStatus, errorThrown){
         console.log(errorThrown.toString());
-    });
-    
-    
-    google.maps.event.addListener(marker, 'click', function(){
-    	showInfo(marker, content);
     });
     
     markers.push(marker);
@@ -203,8 +202,10 @@ function hideInfo()
  */
 function removeMarkers()
 {
-
-    
+    for (var i = 0; i < markers.length; i++){
+        markers[i].setMap(null);
+    }
+    markers.length = 0;
 }
 
 /**
