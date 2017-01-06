@@ -34,12 +34,20 @@ $(function() {
             ]
         },
 
-        // hide roads
+        // hide roads(Not anymore ;))
         {
             featureType: "road",
             elementType: "geometry",
             stylers: [
-                {visibility: "off"}
+                {visibility: "on"}// some more personal touch, enables the roads to navigate in plain areas
+            ]
+        },
+        //show waters too (some more personal touch)
+        {
+            featureType: "water",
+            elementType: "geometry",
+            stylers: [
+                {visibility: "on"}
             ]
         }
 
@@ -49,7 +57,7 @@ $(function() {
     // https://developers.google.com/maps/documentation/javascript/reference#MapOptions
     var options = {
         center: {lat: 28.0214, lng: 75.8947}, // Nalpur, khetri, rajasthan, India <3 	
-        disableDefaultUI: true,
+        disableDefaultUI: false,
         mapTypeId: google.maps.MapTypeId.ROADMAP,
         maxZoom: 14,
         panControl: true,
