@@ -74,8 +74,52 @@ $(function() {
  */
 function addMarker(place)
 {
-    // TODO
-}
+    var Latlng = new google.maps.LatLng(place.latitude, place.longitude);
+    var image = { 
+        url : "http://maps.google.com/mapfiles/kml/pal2/icon31.png",
+    };
+    var marker = new MarkerWithLabel({
+        labelContent: place.place_name + ", " + place.admin_name1,
+        position: Latlng,
+        map: map,
+        icon: image,
+        animation: google.maps.Animation.DROP,
+        title: 'PIN code: ' + place.postal_code // some personal touch
+    });
+    
+    var content = '<ul>\n';
+    var query = place.place_name;
+    var parameters = {
+        geo: query
+    };
+    $.getJSON("articles.php", parameters)
+    .done(function(data, textStatus, jqXHR) {
+        
+        if (data.length==0){
+            content += "No recent News here";
+        }
+        else{
+            for (var i = 0; i < data.length; i++){   
+                content += "<li>";
+                content = content + "<a href=" + data[i].link + " target='_blank' >";
+                content += data[i].title;
+                content += "</a>";
+                content += "</li>";
+            }
+        }
+        content += '</ul>';
+    })
+    .fail(function(jqXHR, textStatus, errorThrown){
+        console.log(errorThrown.toString());
+    });
+    
+    
+    google.maps.event.addListener(marker, 'click', function(){
+    	showInfo(marker, content);
+    });
+    
+    markers.push(marker);
+    marker.setMap(map);}
 
 /**
  * Configures application.
@@ -159,7 +203,8 @@ function hideInfo()
  */
 function removeMarkers()
 {
-    // TODO
+
+    
 }
 
 /**
