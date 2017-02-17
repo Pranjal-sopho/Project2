@@ -30,7 +30,7 @@
         
         <h3>Insert any url of shiksha.com below to see the details of colleges in that city!</h3>
         
-        <form action="index.php" method="post" style="background-color: black;">
+        <form action="scraper.php" method="get" style="background-color: black;">
     
             <div class="form-group">
                 <input autocomplete="off" autofocus class="form-control" name="city_url" placeholder="City's URL" type="text" id="city_url"/>
