@@ -18,5 +18,11 @@
             preg_match_all('/<a href="http:\/\/www.shiksha.com\/.+\n.+(.+).+<\/a>/', $data, $course);
             for($i=1; $i<31; $i++)
             echo $course[0][$i];
+            
+            //address of the college
+            preg_match_all('/<a class="institute-title-clr".+ title.+<span>,(.+)<\/span>/', $data, $addresses);
+            for($i=0; $i<31; $i++)
+            echo $addresses[1][$i];
+            
         }
 ?>
