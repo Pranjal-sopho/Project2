@@ -97,6 +97,7 @@ form {
 </head>
 
 <body>
+	<?php require("header.php") ?>
 <form method="post" action="" id="form">
   <div>
     <label for="name">Name: <span class="required">*</span> </label>
@@ -140,4 +141,5 @@ form {
   </div>
 </form>
 </body>
+<footer><?php require("footer.php") ?></footer>
 </html>

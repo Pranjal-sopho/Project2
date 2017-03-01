@@ -37,6 +37,14 @@
 	margin: auto 85px;
 	width: 100px;
 }
+	.store{
+		width: 25%;
+	background-color: white;
+		align-self: center;
+		margin: auto auto 50px 500px;
+	color: black;
+	border: 2px solid #008CBA;
+	}
 .button {
 	background-color: #4CAF50; /* Green */
 	border: none;
@@ -85,36 +93,46 @@ form {
 </head>
 
 <body>
+
+
 <div class="well container-fluid">
-  <form method="post" action="" id="form">
-    <div>
-      <label for="email">Email Address: <span class="required">*</span> </label>
-      <input type="email" id="email" name="email" value="" placeholder="your@email.com" required="required" autofocus/>
-    </div>
-    <div>
-      <label for="password">Password: <span class="required">*</span>
-        <input type="password" id="password" name="password" value="" placeholder="your password" required="required" />
-      </label>
-    </div>
-    <div class="form-group">
-      <div class="col-sm-offset-2 col-sm-10">
-        <div class="checkbox">
-          <label>
-            <input type="checkbox">
-            Remember me </label>
+  <blockquote>
+    <form method="post" action="" id="form">
+      <div>
+        <label for="email">Email Address: <span class="required">*</span> </label>
+        <input type="email" id="email" name="email" value="" placeholder="your@email.com" required="required" autofocus/>
+      </div>
+      <div>
+        <label for="password">Password: <span class="required">*</span>
+          <input type="password" id="password" name="password" value="" placeholder="your password" required="required" />
+        </label>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <div class="checkbox">
+            <label>
+              <input type="checkbox">
+              Remember me </label>
+          </div>
         </div>
       </div>
-    </div>
-    <div>
-      <p>
-        <input class="button signIn" type="submit" value="Sign in" id="sign_in" />
-      </p>
-      <p style="margin-left: 140px">Or</p>
-    </div>
-    <div>
-      <input class="button register" url="#" value="Register" id="register" />
-    </div>
-  </form>
+      <div>
+        <p>
+          <input class="button signIn" type="submit" value="Sign in" id="sign_in" />
+        </p>
+        <p style="margin-left: 140px">Or</p>
+      </div>
+      <div>
+        <input class="button register" url="#" value="Register" id="register" />
+      </div>
+    </form>
+  </blockquote>
+  <div>
+    <input class="button register store" url="#" value="Go to store" id="store" />
+	</div>
 </div>
 </body>
+	<footer>
+		<?php require("footer.php") ?>
+	</footer>
 </html>
