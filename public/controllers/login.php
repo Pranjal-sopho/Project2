@@ -16,7 +16,7 @@
         $_POST["password"] = htmlspecialchars($_POST["$password"]);
         
         // validating username and password
-        $result = query("SELECT * FROM users WHERE username = ?",$_POST["username"]);
+        $result = query("SELECT * FROM users WHERE username = \"".$_POST["username"]."\"");
         
         if($result == false)
             apologize("Invalid username or password!!");

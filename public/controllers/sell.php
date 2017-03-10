@@ -19,8 +19,7 @@
             else
             {
                 // insert item in store
-                $bool = query("INSERT INTO store (user_id,category,title,description,price,contact_info)");
-                
+                $bool = query("INSERT INTO store (user_id,category,title,description,price,contact_info) VALUES(\"".$_SESSION["id"]."\",\"".$category."\",\"".$title."\",\"".$description."\",\"".$price."\",\"".$contact_info."\")");
                 if(!$bool)
                     apologize("Item couldn't be added to store, please try again");
                     
