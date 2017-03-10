@@ -27,7 +27,7 @@
                 else
                 {
                     // redirect to dashboard
-                    redirect("index.php");
+                    redirect("dashboard.php");
                 }
             }
         

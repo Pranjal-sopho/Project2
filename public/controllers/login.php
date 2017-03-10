@@ -27,7 +27,7 @@
             $_SESSION["id"] = $result["user_id"];
             
             // logging in the user
-            redirect("index.php");
+            redirect("dashboard.php");
         }
     }
 ?>
