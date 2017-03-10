@@ -16,7 +16,7 @@
         $sale = query("SELECT * FROM users WHERE user_id = ?",$_SESSION["id"]);
         
         // render user's dashboard
-        render("dashboard.php",["title" => "Dashboard"]);
+        render("dashboard.php",["title" => "Dashboard","sale" => $sale]);
         
     }
 ?>

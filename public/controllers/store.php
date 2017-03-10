@@ -1,5 +1,7 @@
 <?php
-
+/*
+store shoes all the items available for sale
+*/
     // if user reaches page via a get request
     if("REQUEST_METHOD" == "GET")
     {
