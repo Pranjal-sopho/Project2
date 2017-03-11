@@ -21,12 +21,12 @@
         else
         {
             // check if username is unique
-            $row = query("SELECT username FROM users WHERE username = ?",$_POST["username"]);
+            $row = query("SELECT username FROM users WHERE username = \"".$_POST["username"]."\"");
             
             if(empty($row))
             {
                 // register new account in database
-                $bool = query("INSERT INTO users (username,password,email_id,sex,) VALUES (?,?,?)",$_POST["username"],$_POST["password"],$_POST["email_id"]);
+                $bool = query("INSERT INTO users (username,password,email_id,sex,) VALUES (\"".$_POST["username"]."\",\"".,$_POST["password"]."\",\"".$_POST["email_id"]."\")");
                 
                 if($bool === false)
                     apologize("Registration failed, Please try again");
