@@ -7,19 +7,35 @@
     else if ($_SERVER["REQUEST_METHOD"] == "POST")
     {
         // checking if a field is empty
-        if(empty($category) | empty($title) | empty($description) | empty($contact_info) | empty($price) | !isset($radio1) | !isset($radio2))
+        if(empty($category) | empty($title) | empty($description) | empty($contact_info) | empty($price) | !isset($radio1) | !isset($radio2) | !file_exists($_FILES['myfile']['tmp_name']) || !is_uploaded_file($_FILES['myfile']['tmp_name']))
             apologize("Plese fill all the fields");
             
         else 
         {
-            //validate submission (one more thing left to check)
-            if(strlen($title) <4 | strlen($description) > 200 | strlen($contact_info) < 4 | !is_numeric($price))
+            // Get filesize
+             $file_size = $_FILES['myfile']['size']; 
+            
+            //validate submission 
+            if(strlen($title) <4 | strlen($description) > 200 | strlen($contact_info) < 4 | !is_numeric($price) | $file_size > 200*1000)
                 apologize("Please enter valid details and try again");
                 
             else
             {
+                $target_path = "/home/jharvard/Project2/public/images";
+                $target_path = $target_path . basename( $_FILES['myfile']['name']); 
+                
+                // move uploaded file to target path
+                if(move_uploaded_file($_FILES['myfile']['tmp_name'], $target_path)) 
+                {
+                    // Get Filename
+                    $file_name = $_FILES['myfile']['name'];
+                    
+                    // generating file address
+                    $file_address = "/home/jharvard/Project2/public/images/".$file_name;
+                }
                 // insert item in store
-                $bool = query("INSERT INTO store (user_id,category,title,description,price,contact_info) VALUES(\"".$_SESSION["id"]."\",\"".$category."\",\"".$title."\",\"".$description."\",\"".$price."\",\"".$contact_info."\")");
+                $bool = query("INSERT INTO store (user_id,category,title,description,price,contact_info,images) VALUES(\"".$_SESSION["id"]."\",\"".$category."\",\"".$title."\",\"".$description."\",\"".$price."\",\"".$contact_info."\",\"".$file_address."\")");
+               
                 if(!$bool)
                     apologize("Item couldn't be added to store, please try again");
                     
