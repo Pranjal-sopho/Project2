@@ -96,6 +96,7 @@ form {
 
 
 <div class="well container-fluid">
+	<?php require('header.php') ?>
   <blockquote>
     <form method="post" action="" id="form">
       <div>
