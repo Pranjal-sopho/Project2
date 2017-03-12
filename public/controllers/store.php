@@ -4,7 +4,7 @@ on the website */
 <?php
 
     // configuration
-    require("../includes/helpers.php");
+    require("../../includes/helpers.php");
 
     // if user reaches page via a get request
     if("REQUEST_METHOD" == "GET")
