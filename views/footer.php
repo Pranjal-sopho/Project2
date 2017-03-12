@@ -1,1 +1,0 @@
-<div style="margin:auto 500px 0px auto;"><h6>&#169 copyright [company name]. All rights reserved.</h6></div>
