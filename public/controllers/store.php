@@ -1,7 +1,11 @@
+/* store shows all the items put by users on sale 
+on the website */
+
 <?php
-/*
-store shoes all the items available for sale
-*/
+
+    // configuration
+    require("../includes/helpers.php");
+
     // if user reaches page via a get request
     if("REQUEST_METHOD" == "GET")
     {

@@ -11,7 +11,7 @@
     else if($_SERVER["REQUEST_METHOD"] == "POST")
     {
         // check if a field is empty
-        if(empty($_POST["username"]) | empty($_POST["password"]) | empty($_POST["email_id"]) | empty($_POST["confirmation"]) | !isset($_POST["radio"]))
+        if(empty($_POST["username"]) | empty($_POST["password"]) | empty($_POST["email_id"]) | empty($_POST["confirmation"]) | !isset($_POST["radio-choice"]))
             apologize("Please fill all the fields");
     
         // check if password entered is correct
@@ -26,7 +26,7 @@
             if(empty($row))
             {
                 // register new account in database
-                $bool = query("INSERT INTO users (username,password,email_id,sex,) VALUES (\"".$_POST["username"]."\",\"".,$_POST["password"]."\",\"".$_POST["email_id"]."\")");
+                $bool = query("INSERT INTO users (username,password,email_id,sex,college) VALUES (\"".$_POST["username"]."\", \"".$_POST["password"]."\", \"".$_POST["email_id"]."\",\"".$_POST["radio-choice"]."\", \"".$_POST["college"]."\")");
                 
                 if($bool === false)
                     apologize("Registration failed, Please try again");

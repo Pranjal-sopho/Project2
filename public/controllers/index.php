@@ -1,5 +1,8 @@
 <?php
-  
+
+    // configuration
+    require("../includes/helpers.php");
+    
     //starting session
     session.start();
      
