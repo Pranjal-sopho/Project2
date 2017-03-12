@@ -1,7 +1,7 @@
 <?php
 
     // configuration
-    require("../includes/helpers.php");
+    require("../../includes/helpers.php");
 
     // if user wants to add something to his 'shop'
     if($_SERVER["REQUEST_METHOD"] == "GET")
