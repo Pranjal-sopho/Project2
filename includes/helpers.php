@@ -50,16 +50,16 @@
         $link = mysqli_connect("127.0.0.1", "pranjal123321", "zrrJ8zNEdpuTwuty", "project2");
             
         if($link === false)
-            die("ERROR: Could not connect. " . mysqli_connect_error());
+            return false;
             
         // checking if the query is one of insert, update or delete
-        preg_match(/'.* '/,$query,$match);
+        preg_match('/.* /',$query,$match);
         
         // querying database
         $result = mysqli_query($link,$query);
         
         if($result === false )
-            die("ERROR: Could not execute $query. " . mysqli_error($link));
+            return false;
         
         // if query is select, fetch the resultant object and store in a array
         if($match == "SELECT")
@@ -74,10 +74,15 @@
             
             // freeing result set
             mysqli_free_result($result);
+            
+            // close connection and return the numeric array thus formed
+            mysqli_close($link);
+            return $rows;
         }
         
         // close connection
         mysqli_close($link);
+        return true;
     }
 
 ?>

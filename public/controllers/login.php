@@ -1,5 +1,8 @@
 <?php
 
+    // configuration
+    require("../includes/helpers.php");
+
     // if user reaches page via a get request
     if($_SERVER["REQUEST_METHOD"] == "GET")
         render(login_page.php,["title" => "Log In"]);
