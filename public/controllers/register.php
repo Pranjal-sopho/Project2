@@ -5,7 +5,7 @@
     
     // if user reaches page via get request
     if($_SERVER["REQUEST_METHOD"] == "GET")
-        render("registration_page.php",["title" => "Registration"]);
+        render("register.html",["title" => "Registration"]);
     
     // if user reaches page via submitting a form    
     else if($_SERVER["REQUEST_METHOD"] == "POST")
