@@ -13,15 +13,15 @@
     function render($view,$arr = [])
     {
         // first checking if view exists, then render it
-        if (file_exists("../views/{$view}"))
+        if (file_exists("../../views/{$view}"))
         {
             // extract variables 
             extract($arr);
 
             // render view (between header and footer)
-            require("../views/header.php");
-            require("../views/{$view}");
-            require("../views/footer.php");
+            require("../../views/header.html");
+            require("../../views/{$view}");
+            require("../../views/footer.html");
             exit;
         }
 

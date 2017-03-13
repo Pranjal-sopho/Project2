@@ -1,0 +1,115 @@
+/*styles for id's*/
+#form {
+	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
+	font-size: 25px;
+	width: 500px;
+	align-self: center;
+	vertical-align: middle;
+	margin-top: 200px;
+}
+#email {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	height: 20px;
+	font-size: 12px;
+	width: 200px;
+}
+#password {
+	text-align: center;
+	margin-left: 0px;
+	height: 20px;
+	width: 200px;
+	font-size: 12px;
+}
+#sign_in {
+	align-self: center;
+	font-size: 25px;
+	margin: auto 100px;
+}
+#register {
+	align-self: center;
+	font-size: 25px;
+	margin: auto 85px;
+	width: 185px;
+}
+/*style for classes*/
+		
+.store {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+.button {
+	background-color: #4CAF50;
+	/* Green */
+	border: none;
+	color: white;
+	padding: 16px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	-webkit-transition-duration: 0.4s;
+	/* Safari */
+	transition-duration: 0.4s;
+	cursor: pointer;
+}
+.signIn {
+	background-color: white;
+	color: black;
+	border: 2px solid #008CBA;
+}
+.signIn:hover {
+	background-color: #008CBA;
+	color: white;
+}
+.register {
+	background-color: white;
+	color: black;
+	border: 2px solid #008CBA;
+}
+.register:hover {
+	background-color: #008CBA;
+	color: white;
+}
+/*style for form*/
+		
+form {
+	margin: auto;
+	height: auto;
+	width: auto;
+	position: relative;
+	left: auto;
+	top: auto;
+	right: auto;
+	bottom: auto;
+	display: table;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+.well {
+	align-self: center;
+	vertical-align: middle;
+}
+#name {
+	text-align: center;
+	height: 20px;
+	font-size: 12px;
+	margin-left: 139px;
+	width: 250px;
+}
+#confirmpassword {
+	text-align: center;
+	height: 20px;
+	margin-top: 5px;
+	font-size: 12px;
+	margin-left: 8px;
+	width: 250px;
+}
+#college {
+	margin-left: 100px;
+	margin-top: 5px;
+}
