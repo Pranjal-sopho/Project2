@@ -13,15 +13,15 @@
     function render($view,$arr = [])
     {
         // first checking if view exists, then render it
-        if (file_exists("../../views/{$view}"))
+        if (file_exists("../views/{$view}"))
         {
             // extract variables 
             extract($arr);
 
             // render view (between header and footer)
-            require("../../views/header.html");
-            require("../../views/{$view}");
-            require("../../views/footer.html");
+            require("../views/header.html");
+            require("../views/{$view}");
+            require("../views/footer.html");
             exit;
         }
 
@@ -47,7 +47,7 @@
     function query($query)
     {
         // attempting to connect to mysql server
-        $link = mysqli_connect("127.0.0.1", "pranjal123321", "zrrJ8zNEdpuTwuty", "project2");
+        $link = mysqli_connect("127.0.0.1", "sanjaykhadda", "3vXt73bGW7mEcGnI", "project2");
             
         if($link === false)
             return false;

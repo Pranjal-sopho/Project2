@@ -4,13 +4,13 @@
 	font-size: 25px;
 	width: 500px;
 	align-self: center;
-	vertical-align: middle;
-	margin-top: 200px;
+	margin-top: 100px;
 }
 #email {
 	text-align: center;
 	margin-left: auto;
 	margin-right: auto;
+	margin-top: 10px;
 	height: 20px;
 	font-size: 12px;
 	width: 200px;
@@ -18,6 +18,7 @@
 #password {
 	text-align: center;
 	margin-left: 0px;
+	margin-top:10px;
 	height: 20px;
 	width: 200px;
 	font-size: 12px;
@@ -30,9 +31,29 @@
 #register {
 	align-self: center;
 	font-size: 25px;
-	margin: auto 85px;
+	margin-top: 50px;
 	width: 185px;
 }
+#name {
+	text-align: center;
+	height: 20px;
+	font-size: 12px;
+	width: 200px;
+}
+#confirmpassword {
+	text-align: center;
+	height: 20px;
+	margin-top: 10px;
+	font-size: 12px;
+	margin-left: 8px;
+	width: 200px;
+}
+#college {
+	margin-left: 100px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
 /*style for classes*/
 		
 .store {
@@ -74,6 +95,10 @@
 	background-color: #008CBA;
 	color: white;
 }
+.well {
+	align-self: center;
+	vertical-align: middle;
+}
 /*style for form*/
 		
 form {
@@ -90,26 +115,5 @@ form {
 	margin-left: auto;
 	margin-right: auto;
 }
-.well {
-	align-self: center;
-	vertical-align: middle;
-}
-#name {
-	text-align: center;
-	height: 20px;
-	font-size: 12px;
-	margin-left: 139px;
-	width: 250px;
-}
-#confirmpassword {
-	text-align: center;
-	height: 20px;
-	margin-top: 5px;
-	font-size: 12px;
-	margin-left: 8px;
-	width: 250px;
-}
-#college {
-	margin-left: 100px;
-	margin-top: 5px;
-}
+
+

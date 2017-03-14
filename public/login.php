@@ -1,11 +1,11 @@
 <?php
 
     // configuration
-    require("../../includes/helpers.php");
+    require("../includes/helpers.php");
 
     // if user reaches page via a get request
     if($_SERVER["REQUEST_METHOD"] == "GET")
-        render(login_page.php,["title" => "Log In"]);
+        render(login_form.php,["title" => "Log In"]);
         
     // if user reaches page via post
     else if($_SERVER["REQUEST_METHOD"] == "POST")

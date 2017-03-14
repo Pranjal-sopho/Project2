@@ -4,10 +4,10 @@
     session_start();
 
     // configuration
-    require("../../includes/helpers.php");
+    require("../includes/helpers.php");
 
     
     // if user reached page via a GET request
     if ($_SERVER["REQUEST_METHOD"] == "GET")
-        render("Homepage.html", ["title" => "Home"]);
+        render("login_form.php", ["title" => "Home"]);
 ?>

@@ -1,5 +1,3 @@
-/* store shows all the items put by users on sale 
-on the website */
 
 <?php
 
