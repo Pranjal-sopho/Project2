@@ -1,7 +1,8 @@
-/* store shows all the items put by users on sale 
-on the website */
 
 <?php
+
+/* store shows all the items put by users on sale 
+on the website */
 
     // configuration
     require("../../includes/helpers.php");
