@@ -4,9 +4,16 @@
     require("../../includes/helpers.php");
 
     // if user wants to add something to his 'shop'
-    if($_SERVER["REQUEST_METHOD"] == "GET")
-        render("sell_form.php",["title" => "Sell"]);
-        
+    if($_SERVER["REQUEST_METHOD"] == "GET" )
+    {
+        //check if user is logged in
+        if(isset($_SESSION["id"]))
+             render("sell_form.php",["title" => "Sell"]);
+             
+        else
+        apologize("You must login or register to sell an item");
+    }
+       
     else if ($_SERVER["REQUEST_METHOD"] == "POST")
     {
         // checking if a field is empty
@@ -24,7 +31,7 @@
                 
             else
             {
-                $target_path = "/home/jharvard/Project2/public/images";
+                $target_path = "/home/jharvard/Project2/public/img";
                 $target_path = $target_path . basename( $_FILES['myfile']['name']); 
                 
                 // move uploaded file to target path

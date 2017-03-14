@@ -5,13 +5,24 @@
     
     // if user reaches page via get request
     if($_SERVER["REQUEST_METHOD"] == "GET")
+<<<<<<< HEAD:public/register.php
         render("register_form.php",["title" => "Registration"]);
+=======
+        render("registration.php",["title" => "Registration"]);
+>>>>>>> 9c4b1a13fe47c352104566fb1fb61c4b42f2d704:public/controllers/register.php
     
     // if user reaches page via submitting a form    
     else if($_SERVER["REQUEST_METHOD"] == "POST")
     {
+<<<<<<< HEAD:public/register.php
+=======
+        // check if a field is empty
+        if(empty($_POST["username"]) | empty($_POST["password"]) | empty($_POST["email_id"]) | empty($_POST["confirm_password"]) | !isset($_POST["radio-choice"]))
+            apologize("Please fill all the fields");
+    
+>>>>>>> 9c4b1a13fe47c352104566fb1fb61c4b42f2d704:public/controllers/register.php
         // check if password entered is correct
-        if($_POST["password"] != $_POST["confirmation"])
+        if($_POST["password"] != $_POST["confirm_password"])
             apologize("passwords do not match");
             
         else
