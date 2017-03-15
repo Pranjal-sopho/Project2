@@ -2,19 +2,19 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Registration</title>
+<title><?=$title?></title>
 	<link href="/css/styles.css" rel="stylesheet" type="text/css"/>
 </head>
 
 <body>
-<form method="post" action="" id="form">
+<form method="post" action="register.php" id="form">
   <div>
     <label for="name">Name: <span class="required">*</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8201;&#8201;</label>
-    <input type="text" id="name" name="name" placeholder="Your name" required="required" autofocus />
+    <input type="text" id="name" name="username" placeholder="Your name" required="required" autofocus />
   </div>
   <div>
     <label for="email">Email Address: <span class="required">*</span> &nbsp;&nbsp;</label>
-    <input type="email" id="email" name="email" placeholder="your@email.com" required="required" />
+    <input type="email" id="email" name="email_id" placeholder="your@email.com" required="required" />
   </div>
   <div>
     <label for="password">New Password: <span class="required">*</span> &nbsp;&nbsp;</label>
@@ -22,7 +22,7 @@
   </div>
   <div>
     <label for="password">Confirm Password: <span class="required">*</span> </label>
-    <input type="password" id="confirmpassword" name="confirmation" placeholder="confirm password" required="required" />
+    <input type="password" id="confirmpassword" name="confirm_password" placeholder="confirm password" required="required" />
   </div>
   <div>
     <label for="subject">&#8201;&#8201;&#8201;College:*</label>

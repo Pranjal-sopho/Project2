@@ -11,18 +11,18 @@
     else if($_SERVER["REQUEST_METHOD"] == "POST")
     {
         // check if a field is empty
-        if(empty($_POST["username"]) || empty($_POST["password"]) )
-            apologize("Please enter a username and password");
+        if(empty($_POST["email_id"]) || empty($_POST["password"]) )
+            apologize("Please enter an email id and password");
 
         // preventing sql injection
-        $_POST["username"] = htmlspecialchars($_POST["$username"]);
+        $_POST["email_id"] = htmlspecialchars($_POST["$email_id"]);
         $_POST["password"] = htmlspecialchars($_POST["$password"]);
         
-        // validating username and password
-        $result = query("SELECT * FROM users WHERE username = \"".$_POST["username"]."\"");
+        // validating email_id and password
+        $result = query("SELECT * FROM users WHERE email_id = \"".$_POST["email_id"]."\"");
         
-        if($result == false)
-            apologize("Invalid username or password!!");
+        if($result === false)
+            apologize("Invalid email_id or password!!");
             
         else if ($_POST["password"] == $result["password"])
         {

@@ -47,13 +47,13 @@
     function query($query)
     {
         // attempting to connect to mysql server
-        $link = mysqli_connect("127.0.0.1", "sanjaykhadda", "3vXt73bGW7mEcGnI", "project2");
+        $link = mysqli_connect("127.0.0.1", "pranjal123321", "zrrJ8zNEdpuTwuty", "project2");
             
         if($link === false)
             return false;
             
         // checking if the query is one of insert, update or delete
-        preg_match('/.* /',$query,$match);
+        preg_match('/.*? /',$query,$match);
         
         // querying database
         $result = mysqli_query($link,$query);
@@ -62,7 +62,7 @@
             return false;
         
         // if query is select, fetch the resultant object and store in a array
-        if($match == "SELECT")
+        if($match[0] == "SELECT ")
         {
             $i=0;    
             while($row = mysqli_fetch_array($result,MYSQLI_ASSOC))
