@@ -12,6 +12,10 @@ on the website */
     {
         // GET ITEMS IN STORE
         $store = query("SELECT * FROM users WHERE user_id = \"".$_POST["id"]."\"");
-        render("store.php",["title" => "Store","store" => $store]);
+        if($store === false)
+            apologize("could not fetch store, please try again later");
+        
+        else
+            render("store_result.php",["title" => "Store","store" => $store]);
     }
 ?>
