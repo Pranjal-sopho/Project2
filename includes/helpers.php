@@ -19,9 +19,10 @@
             extract($arr);
 
             // render view (between header and footer)
-            require("../views/header.html");
+            if($view!="login_form.php"&&$view!="register_form.php")
+            require("../views/header.php");
             require("../views/{$view}");
-            require("../views/footer.html");
+            require("../views/footer.php");
             exit;
         }
 

@@ -10,10 +10,7 @@
     // if user reaches page via submitting a form    
     else if($_SERVER["REQUEST_METHOD"] == "POST")
     {
-        // check if a field is empty
-        if(empty($_POST["username"]) | empty($_POST["password"]) | empty($_POST["email_id"]) | empty($_POST["confirm_password"]) | !isset($_POST["radio-choice"]))
-            apologize("Please fill all the fields");
-    
+
         // check if password entered is correct
         if($_POST["password"] != $_POST["confirm_password"])
             apologize("passwords do not match");
@@ -34,9 +31,6 @@
                 // redirect user to login page
                 redirect("login.php");
             }
-            
-            else
-                apologize("An account with this username already exists,try again with a different username");
         }
             
     }

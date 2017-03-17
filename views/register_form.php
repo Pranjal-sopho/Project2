@@ -7,6 +7,18 @@
 </head>
 
 <body>
+  <header>
+	<div class="wrapper">
+		<a href="/"><img src="img/logo.png"/></a>
+		<nav>
+			<ul>
+			    <li><a href="index.php">Log In</a> </li>
+				<li><a href="store.php">Go to store</a></li>
+			</ul>
+		</nav>
+	</div>
+</header>
+<div class="container-fluid">
 <form method="post" action="register.php" id="form">
   <div>
     <label for="name">Name: <span class="required">*</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8201;&#8201;</label>
@@ -24,8 +36,15 @@
     <label for="password">Confirm Password: <span class="required">*</span> </label>
     <input type="password" id="confirmpassword" name="confirm_password" placeholder="confirm password" required="required" />
   </div>
-  <div>
-    <label for="subject">&#8201;&#8201;&#8201;College:*</label>
+  <div> Gender: *&nbsp;&nbsp;&thinsp;&thinsp;
+    <label for="radio-choice-1"> Male</label>
+    <input type="radio" name="radio-choice"  id="gender" tabindex="2" value="Male">
+    <label for="radio-choice-2">Female</label>
+    <input type="radio" name="radio-choice" tabindex="3" value="Female">
+    <label for="radio-choice-2">Other</label>
+    <input type="radio" name="radio-choice" tabindex="3" value="Other">
+  </div><div>
+    <label for="subject">College:*</label>
     <select id="college" name="college">
       <option>Select your college</option>
       <option value="Indian Institute of Technology, Delhi">Indian Institute of Technology, Delhi</option>
@@ -35,17 +54,10 @@
       <option value="Delhi Technological University, New Delhi">Delhi Technological University, New Delhi</option>
     </select>
   </div>
-  <div> Gender: *&nbsp;&nbsp;
-    <label for="radio-choice-1"> Male</label>
-    <input type="radio" name="radio-choice"  id="gender" tabindex="2" value="Male">
-    <label for="radio-choice-2">Female</label>
-    <input type="radio" name="radio-choice" tabindex="3" value="Female">
-    <label for="radio-choice-2">Other</label>
-    <input type="radio" name="radio-choice" tabindex="3" value="Other">
-  </div>
   <div>
     <input type="submit" value="Register" id="register" class="button register"/>
   </div>
 </form>
+</div>
 </body>
 </html>

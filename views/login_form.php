@@ -7,40 +7,35 @@
 	</head>
 
 	<body>
-    <div class="well container-fluid">
+	  <header>
+	<div class="wrapper">
+		<a href="/"><img src="img/logo.png"/></a>
+		<nav>
+			<ul>
+			    <li><a href="register.php">Register</a> </li>
+				<li><a href="store.php">Go to store</a></li>
+			</ul>
+		</nav>
+	</div>
+</header>
+    <div class="well container-fluid" id="form_div">
       <blockquote>
         <form method="post" action="login.php" id="form">
-          <div>
-            <label for="email">Email Address: <span class="required">*</span> </label>
-            <input type="email" id="email" name="email_id" value="" placeholder="your@email.com" required="required" autofocus/>
+          <div style="margin-top:130px !important">
+            <label for="email">Email Address: <span class="required"></span> </label>
+            <input type="email" id="email" name="email_id" placeholder="your@email.com" required="required" autofocus/>
           </div>
           <div>
-            <label for="password">Password: <span class="required">*</span>&#160;&#160;
+            <label for="password">Password: <span class="required"></span>&#160;&#160;&thinsp;
               <input type="password" id="password" name="password" value="" placeholder="your password" required="required" />
             </label>
-          </div>
-          <div class="form-group">
-            <div class="col-sm-offset-2 col-sm-10">
-              <div class="checkbox">
-                <label>
-                  <input type="checkbox">
-                  Remember me </label>
-              </div>
-            </div>
           </div>
           <div>
             <p>
               <input class="button signIn" type="submit" value="Sign in" id="sign_in"/>
             </p>
-            <p>Or</p>
           </div>
-          <div> <a href="register.php">
-            <input class="button register" value="Register" id="register"/>
-            </a> </div>
         </form>
-        <div><a href="store.php">
-          <input class="button register store" value="Go to store" id="store"/>
-          </a> </div>
       </blockquote>
     </div>
 </body>
