@@ -17,7 +17,7 @@
     else if ($_SERVER["REQUEST_METHOD"] == "POST")
     {
         // checking if a field is empty
-        if(empty($category) | empty($title) | empty($description) | empty($contact_info) | empty($price) | !isset($radio1) | !isset($radio2) | !file_exists($_FILES['myfile']['tmp_name']) || !is_uploaded_file($_FILES['myfile']['tmp_name']))
+        if(empty($category) | empty($title) | empty($description) | empty($college) | empty($contact_info) | empty($price) | !isset($radio1) | !isset($radio2) | !file_exists($_FILES['myfile']['tmp_name']) || !is_uploaded_file($_FILES['myfile']['tmp_name']))
             apologize("Plese fill all the fields");
             
         else 
@@ -44,7 +44,7 @@
                     $file_address = "/home/jharvard/Project2/public/images/".$file_name;
                 }
                 // insert item in store
-                $bool = query("INSERT INTO store (user_id,category,title,description,price,contact_info,images) VALUES(\"".$_SESSION["id"]."\",\"".$category."\",\"".$title."\",\"".$description."\",\"".$price."\",\"".$contact_info."\",\"".$file_address."\")");
+                $bool = query("INSERT INTO store (user_id,category,title,description,price,contact_info,images,college,date) VALUES(\"".$_SESSION["id"]."\",\"".$category."\",\"".$title."\",\"".$description."\",\"".$price."\",\"".$contact_info."\",\"".$file_address."\",\"".$college."\",\"".date("d/m/Y")."\")");
                
                 if(!$bool)
                     apologize("Item couldn't be added to store, please try again");

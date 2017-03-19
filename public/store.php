@@ -12,6 +12,7 @@ on the website */
     {
         // GET ITEMS IN STORE
         $store = query("SELECT * FROM store WHERE user_id = \"".$_SESSION["id"]."\"");
+        
         if($store === false)
             apologize("could not fetch store, please try again later");
         
