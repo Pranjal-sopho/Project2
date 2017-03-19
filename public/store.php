@@ -8,10 +8,10 @@ on the website */
     require("../includes/helpers.php");
 
     // if user reaches page via a get request
-    if("REQUEST_METHOD" == "GET")
+    if($_SERVER["REQUEST_METHOD"] == "GET")
     {
         // GET ITEMS IN STORE
-        $store = query("SELECT * FROM users WHERE user_id = \"".$_POST["id"]."\"");
+        $store = query("SELECT * FROM store WHERE user_id = \"".$_SESSION["id"]."\"");
         if($store === false)
             apologize("could not fetch store, please try again later");
         
