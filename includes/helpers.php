@@ -19,7 +19,7 @@
             extract($arr);
 
             // render view (between header and footer)
-            if($view!="login_form.php"&&$view!="register_form.php")
+            if($view!="login_form.php" && $view!="register_form.php")
             require("../views/header.php");
             require("../views/{$view}");
             require("../views/footer.php");
@@ -48,7 +48,7 @@
     function query($query)
     {
         // attempting to connect to mysql server
-        $link = mysqli_connect("127.0.0.1", "pranjal123321", "zrrJ8zNEdpuTwuty", "project2");
+        $link = mysqli_connect("127.0.0.1", "sanjaykhadda", "3vXt73bGW7mEcGnI", "project2");
             
         if($link === false)
             return false;
