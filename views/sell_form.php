@@ -21,6 +21,17 @@
     <label>Price: <span class="required">*</span> </label>
     <input type="number" id="price" name="price" placeholder="price" required="required" />
   </div>
+  <div>
+    <label for="subject">College:*</label>
+    <select id="college" name="college">
+      <option>Select your college</option>
+      <option value="Indian Institute of Technology, Delhi">Indian Institute of Technology, Delhi</option>
+      <option value="Indian Institute of Technology, Guwahati">Indian Institute of Technology, Guwahati</option>
+      <option value="Birla Institute of Technology and Science, Pilani">Birla Institute of Technology and Science, Pilani</option>
+      <option value="National Institute of Technology, Jaipur">National Institute of Technology, Jaipur</option>
+      <option value="Delhi Technological University, New Delhi">Delhi Technological University, New Delhi</option>
+    </select>
+  </div>
     <label for="subject">Category:*</label>
     <select id="category" name="category">
       <option>Select category of your item</option>

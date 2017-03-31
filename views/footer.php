@@ -1,14 +1,13 @@
 <style>
 .footer-distributed{
-	position:absolute;
+	position:relative;
 	background-color: #292c2f;
 	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
-	box-sizing: border-box;
-	width: 100%;
+	width: 93%;
 	text-align: left;
 	font: normal 16px sans-serif;
-	margin-left:0px;
 	padding: 45px 50px;
+	margin-bottom:0px;
 }
 
 .footer-distributed .footer-left p{

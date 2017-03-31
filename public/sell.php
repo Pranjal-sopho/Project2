@@ -17,7 +17,7 @@
     else if ($_SERVER["REQUEST_METHOD"] == "POST")
     {
         // checking if a field is empty
-        if(empty($category) | empty($title) | empty($description) | empty($college) | empty($contact_info) | empty($price) | !isset($radio1) | !isset($radio2) | !file_exists($_FILES['myfile']['tmp_name']) || !is_uploaded_file($_FILES['myfile']['tmp_name']))
+        if(empty($title) | empty($description) | empty($contact_info) | empty($price) | !isset($college) | !isset($category) | !file_exists($_FILES['myfile']['tmp_name']) || !is_uploaded_file($_FILES['myfile']['tmp_name']))
             apologize("Plese fill all the fields");
             
         else 
