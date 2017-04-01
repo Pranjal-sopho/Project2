@@ -8,7 +8,7 @@
     {
          // extract user's items on sale from database
         $sale = query("SELECT * FROM store WHERE user_id =\"".$_SESSION["id"]."\"");
-        
+        //var_dump(($_SESSION["id"]));
         // render user's dashboard
         render("dashboard_page.php",["title" => "Dashboard","sale" => $sale]);
     }
