@@ -17,7 +17,7 @@
 #password {
 	text-align: center;
 	margin-left: 0px;
-	margin-top:10px;
+	margin-top: 10px;
 	height: 20px;
 	width: 200px;
 	font-size: 12px;
@@ -31,21 +31,21 @@
 	font-size: 25px;
 	margin-top: 20px;
 	width: 185px;
-	margin-bottom:10px;
+	margin-bottom: 10px;
 }
 #name {
 	text-align: center;
 	height: 20px;
 	font-size: 12px;
 	width: 200px;
-	margin-top:150px;
+	margin-top: 150px;
 }
 #confirmpassword {
 	text-align: center;
 	height: 20px;
 	margin-top: 10px;
 	font-size: 12px;
-	margin-bottom:10px;
+	margin-bottom: 10px;
 	margin-left: 8px;
 	width: 200px;
 }
@@ -53,15 +53,14 @@
 	margin-left: 100px;
 	margin-top: 10px;
 	margin-bottom: 10px;
-	width:232px;
+	width: 232px;
 }
-
 /*style for classes*/
 		
 .store {
 	text-align: center;
-	margin-right:10px;
-	margin-top:10px;
+	margin-right: 10px;
+	margin-top: 10px;
 }
 .button {
 	background-color: #4CAF50;
@@ -99,9 +98,9 @@
 }
 .well {
 	align-self: center;
-	width:100%;
-	margin-left:0px;
-	margin-right:0px;
+	width: 100%;
+	margin-left: 0px;
+	margin-right: 0px;
 }
 /*style for form*/
 		
@@ -132,21 +131,18 @@ form {
 header {
 	height: 0px;
 	background-color: rgb(244, 137, 66);
-	margin-bottom:0;
+	margin-bottom: 0;
 }
 header .color {
 	color: #02b8dd;
 }
-
 header nav {
 	float: right;
 }
-
 header nav ul li {
 	display: inline-block;
 	margin-top: 20px;
 }
-
 header nav ul li a {
 	color: #444;
 	text-transform: uppercase;
@@ -154,5 +150,36 @@ header nav ul li a {
 	display: block;
 	margin-right: 20px;
 }
-
-
+.tbl-header {
+	margin-top: 100px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+#myImage #pattern {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 12px;
+	margin: 50px;
+	width: 480px;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	border-collapse: collapse;
+}
+#pattern th {
+	font-size: 20px;
+	font-weight: normal;
+	padding: 10px;
+	border-bottom: 1px solid #fff;
+	color: #039;
+}
+#pattern td {
+	padding: 15px;
+	border-bottom: 1px solid #fff;
+	color: #669;
+	border-top: 1px solid transparent;
+}
+#pattern tbody tr:hover td {
+	color: #339;
+	background: #fff;
+}

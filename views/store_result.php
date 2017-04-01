@@ -1,81 +1,57 @@
 <!DOCTYPE html>
-<html >
-<head>
-  <meta charset="UTF-8">
-  <title>ColX-<?=$title?></title>
-</head>
-<style>
-.tbl-header{
-  margin-top:100px;
-  margin-left:auto;
-  margin-right:auto;
-  text-align:center;
-}
-#myImage
-#pattern
-{
-	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
-	font-size: 12px;
-	margin: 50px;
-	width: 480px;
-	text-align: center;
-	margin-left:auto;
-	margin-right:auto;
-	border-collapse: collapse;
-}
-#pattern th
-{
-	font-size: 20px;
-	font-weight: normal;
-	padding: 10px;
-	border-bottom: 1px solid #fff;
-	color: #039;
-}
-#pattern td
-{
-	padding: 15px; 
-	border-bottom: 1px solid #fff;
-	color: #669;
-	border-top: 1px solid transparent;
-}
-#pattern tbody tr:hover td
-{
-	color: #339;
-	background: #fff;
-}
+<html>
 
-</style>
+<head>
+	<meta charset="UTF-8">
+	<title>ColX-
+		<?=$title?>
+	</title>
+</head>
+
 <body>
-  <!--for demo wrap-->
-  
-  <div class="tbl-header">
-    <h2>Items available for sale</h2>
-    <table align="center" id="pattern" summary="Meeting Results">
-   <thead>
-    	<tr>
-        	<th scope="col">&emsp;Item&emsp;&emsp;</th>
-        	  <th scope="col">&emsp;Image&emsp;&emsp;</th>
-            <th scope="col">&emsp;Price&emsp;&emsp;</th>
-            <th scope="col">&emsp;College&emsp;&emsp;</th>
-            <th scope="col">&emsp;Category&emsp;&emsp;</th>
-            <th scope="col">&emsp;Date&emsp;&emsp;</th>
-            <th scope="col">&emsp;Seller&emsp;&emsp;</th>
-        </tr>
-  </thead>
-    <tbody>
-    	<?php foreach ($store as $item): ?>
-        <tr>
-            <td align="center"><?= $item["title"] ?></td>
-            <td align="center"><img id="myImage" src=""/></td>
-            <td align="center"><?= number_format($item["price"], 2) ?></td>
-            <td align="center"><?=$item["college"]?></td>
-            <td align="center"><?= $item["category"]?></td>
-            <td align="center"><?=$item["date"]?></td>
-            <td align ="center"><?= $item["seller_info"] ?> </td>   
-        </tr>
-    <?php endforeach ?>
-    </tbody>
-</table>
-  </div>
+
+	<div class="tbl-header">
+		<h2>Items available for sale</h2>
+		<table align="center" id="pattern" summary="Meeting Results">
+			<thead>
+				<tr>
+					<th scope="col">&emsp;Item&emsp;&emsp;</th>
+					<th scope="col">&emsp;Image&emsp;&emsp;</th>
+					<th scope="col">&emsp;Price&emsp;&emsp;</th>
+					<th scope="col">&emsp;College&emsp;&emsp;</th>
+					<th scope="col">&emsp;Category&emsp;&emsp;</th>
+					<th scope="col">&emsp;Date&emsp;&emsp;</th>
+					<th scope="col">&emsp;Seller&emsp;&emsp;</th>
+				</tr>
+			</thead>
+			<tbody>
+				<?php foreach ($store as $item): ?>
+				<tr>
+					<td align="center">
+						<?= $item["title"] ?>
+					</td>
+					<td align="center"><img id="myImage" src=""/>
+					</td>
+					<td align="center">
+						<?= number_format($item["price"], 2) ?>
+					</td>
+					<td align="center">
+						<?=$item["college"]?>
+					</td>
+					<td align="center">
+						<?= $item["category"]?>
+					</td>
+					<td align="center">
+						<?=$item["date"]?>
+					</td>
+					<td align="center">
+						<?= $item["seller_info"] ?>
+					</td>
+				</tr>
+				<?php endforeach ?>
+			</tbody>
+		</table>
+	</div>
 </body>
+
 </html>
