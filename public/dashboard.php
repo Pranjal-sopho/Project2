@@ -7,8 +7,12 @@
     if($_SERVER["REQUEST_METHOD"] == "GET")
     {
          // extract user's items on sale from database
-        $sale = query("SELECT * FROM store WHERE user_id =\"".$_SESSION["id"]."\"");
-        //var_dump(($_SESSION["id"]));
+        $sql = sprintf("SELECT * FROM store WHERE user_id = %s",$_SESSION["id"]);
+        $sale = query($sql);
+        
+        if($sale === false)
+            apologize("Could not fetch ur shop, Please try again");
+        
         // render user's dashboard
         render("dashboard_page.php",["title" => "Dashboard","sale" => $sale]);
     }

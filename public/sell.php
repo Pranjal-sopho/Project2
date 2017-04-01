@@ -1,6 +1,5 @@
 <?php
     
-    
     // configuration
     require("../includes/helpers.php");
 
@@ -44,8 +43,12 @@
                     // generating file address
                     $file_address = "/home/jharvard/Project2/public/img/uploads/".$file_name;
                 }
+                
                 // insert item in store
-                $bool = query("INSERT INTO store (user_id,category,title,description,price,contact_info,images,college,date) VALUES(\"".$_SESSION["id"]."\",\"".$category."\",\"".$title."\",\"".$description."\",\"".$price."\",\"".$contact_info."\",\"".$file_address."\",\"".$college."\",\"".date("d/m/Y")."\")");
+                $sql = sprintf("INSERT INTO store (user_id,category,title,description,price,seller_info,images,college,date) 
+                       VALUES('%s','%s','%s','%s','%s','%s','%s','%s','%s')",
+                       $_SESSION["id"],$category,$title,$description,$price,$contact_info,$file_address,$college,date("d/m/Y"));
+                $bool = query($sql);
                
                 if(!$bool)
                     apologize("Item couldn't be added to store, please try again");
