@@ -1,5 +1,6 @@
 <?php
-
+    
+    
     // configuration
     require("../includes/helpers.php");
 
@@ -7,11 +8,11 @@
     if($_SERVER["REQUEST_METHOD"] == "GET" )
     {
         //check if user is logged in
-        if(isset($_SESSION["id"]))
+        if(!empty($_SESSION["id"]))
              render("sell_form.php",["title" => "Sell"]);
              
         else
-        apologize("You must login or register to sell an item");
+        apologize("You must login or register to sell an item".var_dump(($_SESSION["id"])));
     }
        
     else if ($_SERVER["REQUEST_METHOD"] == "POST")
@@ -31,7 +32,7 @@
                 
             else
             {
-                $target_path = "/home/jharvard/Project2/public/img";
+                $target_path = "/home/jharvard/Project2/public/img/uploads";
                 $target_path = $target_path . basename( $_FILES['myfile']['name']); 
                 
                 // move uploaded file to target path
@@ -41,7 +42,7 @@
                     $file_name = $_FILES['myfile']['name'];
                     
                     // generating file address
-                    $file_address = "/home/jharvard/Project2/public/images/".$file_name;
+                    $file_address = "/home/jharvard/Project2/public/img/uploads/".$file_name;
                 }
                 // insert item in store
                 $bool = query("INSERT INTO store (user_id,category,title,description,price,contact_info,images,college,date) VALUES(\"".$_SESSION["id"]."\",\"".$category."\",\"".$title."\",\"".$description."\",\"".$price."\",\"".$contact_info."\",\"".$file_address."\",\"".$college."\",\"".date("d/m/Y")."\")");

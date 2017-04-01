@@ -1,10 +1,7 @@
 <?php
 
-//starting session
-session_start();
-
-// configuration
-require( "../includes/helpers.php" );
+    // configuration
+    require("../includes/helpers.php");
 
 
 // if user reached page via a GET request
