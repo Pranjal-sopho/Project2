@@ -11,7 +11,7 @@ on the website */
     if($_SERVER["REQUEST_METHOD"] == "GET")
     {
         // GET ITEMS IN STORE
-        $store = query("SELECT * FROM store WHERE user_id = \"".$_SESSION["id"]."\"");
+        $store = query("SELECT * FROM store");
         
         if($store === false)
             apologize("could not fetch store, please try again later");
