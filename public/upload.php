@@ -21,24 +21,15 @@
             
         // Check if file already exists
         if (file_exists($target_path))
-        {
             apologize("Sorry, file already exists.");
-            $status = false;
-        }
         
         // check if file is too large
         if( $_FILES["my_file"]["size"] > 200000)
-        {
             apologize("File size is greater than 200Kb");
-            $status = false;
-        }
         
         // Allow certain file formats only
         if($file_type != "jpg" && $file_type != "png" && $file_type != "jpeg" && $file_type != "gif" ) 
-        {
             apologize("Sorry, unsupported file type");
-            $status = false;
-        }
         
         if (move_uploaded_file($_FILES["my_file"]["tmp_name"], $target_path))
         {
