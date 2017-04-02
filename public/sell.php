@@ -11,13 +11,13 @@
              render("sell_form.php",["title" => "Sell"]);
              
         else
-        apologize("You must login or register to sell an item".var_dump(($_SESSION["id"])));
+        apologize("You must <a href=\"login.php\">login</a> or <a href=\"register.php\">register</a> to sell an item".var_dump(($_SESSION["id"])));
     }
        
     else if ($_SERVER["REQUEST_METHOD"] == "POST")
     {
         // checking if a field is empty
-        if(empty($title) | empty($description) | empty($contact_info) | empty($price) | empty($college) | !isset($category) /*| !file_exists($_FILES['myfile']['tmp_name']) || !is_uploaded_file($_FILES['myfile']['tmp_name'])*/)
+        if(empty($title) | empty($description) | empty($contact_info) | empty($price) | empty($college) | !isset($category) | !file_exists($_FILES['myfile']['tmp_name']) || !is_uploaded_file($_FILES['myfile']['tmp_name']))
             apologize("Please fill all the fields");
             
         else 

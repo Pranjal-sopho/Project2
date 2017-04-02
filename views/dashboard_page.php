@@ -24,6 +24,7 @@
 				</tr>
 			</thead>
 			<tbody>
+				<?php  if($sale!=NULL):?>
 				<?php foreach ($sale as $item): ?>
 				<tr>
 					<td align="center">
@@ -45,6 +46,7 @@
 					</td>
 				</tr>
 				<?php endforeach ?>
+				<?php endif?>
 			</tbody>
 		</table>
 

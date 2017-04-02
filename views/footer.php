@@ -47,7 +47,7 @@
 	background-color:  #33383b;
 	border-radius: 2px;
 
-	font-size: 20px;
+	font-size: 25Ipx;
 	color: #ffffff;
 	text-align: center;
 	line-height: 35px;
@@ -61,15 +61,6 @@
 	.footer-distributed .footer-right{
 		text-align: center;
 	}
-
-	.footer-distributed .footer-right{
-		float: none;
-		margin: 0 auto 20px;
-	}
-
-	.footer-distributed .footer-left p.footer-links{
-		line-height: 1.8;
-	}
 }
 </style>
 <footer class="footer-distributed">
@@ -80,7 +71,7 @@
 					·
 					<a href="#">About</a>
 					·
-					<a href="https://www.facebook.com/sanjay.khadda" target="_blank">Contact Sanjay</a>
+					<a href="https://www.linkedin.com/in/sanjay-khadda-65b298120/" target="_blank">Contact Sanjay</a>
 					·
 					<a href="#" target="_blank">Contact Pranjal</a>
 				</p>

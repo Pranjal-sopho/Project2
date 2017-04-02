@@ -8,10 +8,10 @@
 	<div class="container-fluid">
 		<form method="post" action="sell.php" id="sell_form" enctype="multipart/form-data">
 			<div>
-				<label>Title: <span class="required">*</span> &nbsp;</label>
+				<label><span class="required"></span> &nbsp;</label>
 				<input type="text" id="name" name="title" placeholder="Title of the item" required="required" autofocus/>
 			</div>
-			<label for="subject">Category:*</label>
+			<label for="subject"></label>
 			<select id="category" name="category">
 				<option>Select category of your item</option>
 				<option value="Books">Books</option>
@@ -23,25 +23,26 @@
 				<option value="Other">Others</option>
 			</select>
 			<div>
-				<label>Price: <span class="required">*</span> </label>
+				<label><span class="required"></span> </label>
 				<input type="number" id="price" name="price" placeholder="price" required="required"/>
 			</div>
 			<div>
-				<label>Description: <span class="required">*</span></label>
+				<label><span class="required"></span></label>
 				<input type="text" id="description" name="description" placeholder="Describe your item" required="required"/>
 			</div>
 			<div>
-				<label>Contact Info: <span class="required">*</span></label>
+				<label><span class="required"></span></label>
 				<input type="text" id="info" name="contact_info" placeholder="Contact information" required="required"/>
 			</div>
+			</br>
 			<div>
-				<label>Image: <span class="required">*</span> &nbsp;&nbsp;&nbsp;</label>
-				<input type="file" name="Image" id="fileToUpload" required="required"></br>
+				<label>Image: <span class="required"></span></label>
+				<input type="file" name="myfile" id="fileToUpload" required="required"></br>
 				<input type="button" value="Upload Image" name="submit">
 			</div>
 
 			<div>
-				<label>College: <span class="required">*</span> </label>
+				<label><span class="required"></span> </label>
 				<input type="text" id="college" name="college" placeholder="college" required="required"/>
 			</div>
 			<div>
