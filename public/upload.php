@@ -65,6 +65,6 @@
         }
         
         else
-            apologize("Image coudn't be uplloaded, please try again");
+            apologize("Image coudn't be uploaded, please try again");
     }
 ?>
