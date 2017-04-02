@@ -6,27 +6,38 @@
 </head>
 <body>
 	<div class="container-fluid">
-		<form method="post" action="sell.php" id="form">
+		<form method="post" action="sell.php" id="sell_form" enctype="multipart/form-data">
 			<div>
-				<label>Title: <span class="required">*</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8201;&#8201;</label>
+				<label>Title: <span class="required">*</span> &nbsp;</label>
 				<input type="text" id="name" name="title" placeholder="Title of the item" required="required" autofocus/>
 			</div>
-			<div>
-				<label>Description: <span class="required">*</span> &nbsp;&nbsp;</label>
-				<input type="text" id="description" name="description" placeholder="Describe your item" required="required"/>
-			</div>
-			<div>
-				<label>Contact Info: <span class="required">*</span> &nbsp;&nbsp;</label>
-				<input type="text" id="info" name="contact_info" placeholder="Contact information" required="required"/>
-			</div>
+			<label for="subject">Category:*</label>
+			<select id="category" name="category">
+				<option>Select category of your item</option>
+				<option value="Books">Books</option>
+				<option value="Clothing">Clothing</option>
+				<option value="Electronics">Electronics</option>
+				<option value="Sports">Sports</option>
+				<option value="Furniture">Furniture</option>
+				<option value="Vehicle">Vehicle</option>
+				<option value="Other">Others</option>
+			</select>
 			<div>
 				<label>Price: <span class="required">*</span> </label>
 				<input type="number" id="price" name="price" placeholder="price" required="required"/>
 			</div>
 			<div>
-				<label>Image: <span class="required">*</span> </label>
-				<input type="file" name="Image" id="fileToUpload">
-				<input type="submit" value="Upload Image" name="submit">
+				<label>Description: <span class="required">*</span></label>
+				<input type="text" id="description" name="description" placeholder="Describe your item" required="required"/>
+			</div>
+			<div>
+				<label>Contact Info: <span class="required">*</span></label>
+				<input type="text" id="info" name="contact_info" placeholder="Contact information" required="required"/>
+			</div>
+			<div>
+				<label>Image: <span class="required">*</span> &nbsp;&nbsp;&nbsp;</label>
+				<input type="file" name="Image" id="fileToUpload" required="required"></br>
+				<input type="button" value="Upload Image" name="submit">
 			</div>
 
 			<div>
@@ -35,19 +46,9 @@
 			</div>
 			<div>
 			</div>
-			<label for="subject">Category:*</label>
-			<select id="category" name="category">
-				<option>Select category of your item</option>
-				<option value="Books">Books</option>
-				<option value="Clothing">Clothing</option>
-				<option value="Electronics">Ele</option>
-				<option value="Sports">Sports</option>
-				<option value="Furniture">Furniture</option>
-				<option value="Vehicle">Vehicle</option>
-				<option value="Other">Others</option>
-			</select>
-	</div>
+			
 	<div>
 		<input type="submit" value="Put for sale" id="sell" class="button register"/>
+	</div>
 	</div>
 </body>

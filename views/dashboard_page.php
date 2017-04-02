@@ -29,7 +29,7 @@
 					<td align="center">
 						<?= $item["title"] ?>
 					</td>
-					<td align="center"><img id="myImage" src=""/>
+					<td align="center"><img id="myImage" src="/img/"/>
 					</td>
 					<td align="center">
 						<?= number_format($item["price"], 2) ?>
@@ -42,9 +42,6 @@
 					</td>
 					<td align="center">
 						<?=$item["date"]?>
-					</td>
-					<td align="center">
-						<?= $item["seller_info"] ?>
 					</td>
 				</tr>
 				<?php endforeach ?>
