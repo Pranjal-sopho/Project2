@@ -12,7 +12,7 @@
         
         if($sale === false)
             apologize("Could not fetch ur shop, Please try again");
-        
+       
         // render user's dashboard
         render("dashboard_page.php",["title" => "Dashboard","sale" => $sale]);
     }
