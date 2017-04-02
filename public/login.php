@@ -29,5 +29,9 @@
             // logging in the user
             redirect("dashboard.php");
         }
+        else
+        {
+            apologize("email id or password is incorrect!");
+        }
     }
 ?>

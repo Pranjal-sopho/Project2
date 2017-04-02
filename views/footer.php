@@ -1,6 +1,6 @@
 <style>
 .footer-distributed{
-	position:relative;
+	position:absolute;
 	background-color: #292c2f;
 	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
 	width: 93%;
@@ -8,6 +8,7 @@
 	font: normal 16px sans-serif;
 	padding: 45px 50px;
 	margin-bottom:0px;
+	bottom:0;
 }
 
 .footer-distributed .footer-left p{

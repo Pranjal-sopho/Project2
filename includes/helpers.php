@@ -84,7 +84,7 @@
     function query($query)
     {
         // attempting to connect to mysql server
-        $link = mysqli_connect("127.0.0.1", "pranjal123321", "zrrJ8zNEdpuTwuty", "project2");
+        $link = mysqli_connect("127.0.0.1", "sanjaykhadda", "3vXt73bGW7mEcGnI", "project2");
             
         if($link === false)
             return false;
@@ -120,6 +120,20 @@
         // close connection
         mysqli_close($link);
         return true;
+    }
+    function logout()
+    {
+        // unset any session variables
+        $_SESSION = [];
+
+        // expire cookie
+        if (!empty($_COOKIE[session_name()]))
+        {
+            setcookie(session_name(), "", time() - 42000);
+        }
+
+        // destroy session
+        session_destroy();
     }
 
 ?>

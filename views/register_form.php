@@ -25,31 +25,31 @@
 	<div class="container-fluid">
 		<form method="post" action="register.php" id="form">
 			<div>
-				<label for="name">Name: <span class="required">*</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8201;&#8201;</label>
+				<label for="name"><span class="required"></span></label>
 				<input type="text" id="name" name="username" placeholder="Your name" required="required" autofocus/>
 			</div>
 			<div>
-				<label for="email">Email Address: <span class="required">*</span> &nbsp;&nbsp;</label>
+				<label for="email"><span class="required"></span></label>
 				<input type="email" id="email" name="email_id" placeholder="your@email.com" required="required"/>
 			</div>
 			<div>
-				<label for="password">New Password: <span class="required">*</span> &nbsp;&nbsp;</label>
+				<label for="password"><span class="required"></span></label>
 				<input type="password" id="password" name="password" placeholder="password" required="required"/>
 			</div>
 			<div>
-				<label for="password">Confirm Password: <span class="required">*</span> </label>
+				<label for="password"><span class="required"></span> </label>
 				<input type="password" id="confirmpassword" name="confirm_password" placeholder="confirm password" required="required"/>
 			</div>
-			<div> Gender: *&nbsp;&nbsp;&thinsp;&thinsp;
+			<div>
 				<label for="radio-choice-1"> Male</label>
 				<input type="radio" name="radio-choice" id="gender" tabindex="2" value="Male">
 				<label for="radio-choice-2">Female</label>
 				<input type="radio" name="radio-choice" tabindex="3" value="Female">
-				<label for="radio-choice-2">Other</label>
-				<input type="radio" name="radio-choice" tabindex="3" value="Other">
+				<label for="radio-choice-3">Other</label>
+				<input type="radio" name="radio-choice" tabindex="4" value="Other">
 			</div>
 			<div>
-				<label>College: <span class="required">*</span> </label>
+				<label><span class="required"></span> </label>
 				<input type="text" id="college" name="college" placeholder="college" required="required"/>
 			</div>
 			<div>

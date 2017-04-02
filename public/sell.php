@@ -11,8 +11,8 @@
              render("sell_form.php",["title" => "Sell"]);
              
         else
-        apologize("You must login or register to sell an item".var_dump(($_SESSION["id"])));
+            apologize("You must login or register to sell an item");
     }
        
-   
+
 ?>

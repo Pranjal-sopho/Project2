@@ -22,11 +22,11 @@
       <blockquote>
         <form method="post" action="login.php" id="form">
           <div style="margin-top:130px !important">
-            <label for="email">Email Address: <span class="required"></span> </label>
+            <label for="email"><span class="required"></span> </label>
             <input type="email" id="email" name="email_id" placeholder="your@email.com" required="required" autofocus/>
           </div>
           <div>
-            <label for="password">Password: <span class="required"></span>&#160;&#160;&thinsp;
+            <label for="password"><span class="required"></span>&#160;&#160;&thinsp;
               <input type="password" id="password" name="password" value="" placeholder="your password" required="required" />
             </label>
           </div>

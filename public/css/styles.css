@@ -5,22 +5,24 @@
 	width: 500px;
 	margin-top: 150px;
 }
-#email {
-	text-align: center;
+#sell_form{
+	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
+	font-size: 25px;
+	width: 500px;
+	margin-top: 150px;
+	margin-left:30%;
+}
+#gender{
+	margin-top:20px;
+}
+#email, #password, #confirmpassword{
+	padding-left:10px;
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 10px;
-	height: 20px;
-	font-size: 12px;
-	width: 200px;
-}
-#password {
-	text-align: center;
-	margin-left: 0px;
-	margin-top: 10px;
-	height: 20px;
-	width: 200px;
-	font-size: 12px;
+	height: 30px;
+	font-size: 15px;
+	width: 300px;
 }
 #sign_in {
 	align-self: center;
@@ -33,27 +35,24 @@
 	width: 185px;
 	margin-bottom: 10px;
 }
-#name {
-	text-align: center;
-	height: 20px;
-	font-size: 12px;
-	width: 200px;
+#name{
+	padding-left:10px;
+	height: 30px;
+	font-size: 15px;
+	width: 300px;
 	margin-top: 150px;
 }
 #confirmpassword {
-	text-align: center;
-	height: 20px;
-	margin-top: 10px;
-	font-size: 12px;
-	margin-bottom: 10px;
+	padding-left:10px;
 	margin-left: 8px;
-	width: 200px;
 }
-#college {
-	margin-left: 100px;
-	margin-top: 10px;
-	margin-bottom: 10px;
-	width: 232px;
+#college, #category, #price, #description, #info {
+	padding-top:0px;
+	padding-left:10px;
+	margin-top:10px;
+	height: 30px;
+	font-size: 15px;
+	width: 300px;
 }
 /*style for classes*/
 		
@@ -72,7 +71,7 @@
 	text-decoration: none;
 	display: inline-block;
 	font-size: 16px;
-	margin: 4px 2px;
+	margin: 10px 2px;
 	-webkit-transition-duration: 0.4s;
 	/* Safari */
 	transition-duration: 0.4s;
@@ -102,6 +101,7 @@
 	margin-left: 0px;
 	margin-right: 0px;
 }
+
 /*style for form*/
 		
 form {
@@ -115,7 +115,7 @@ form {
 	bottom: auto;
 	display: table;
 	text-align: right;
-	margin-right: 30px;
+	margin-left:60%;
 }
 .container-fluid{
 	background: url('https://image.freepik.com/free-vector/shopping-online-sale-background_23-2147509490.jpg') no-repeat center center fixed; 

@@ -26,6 +26,7 @@
 			</thead>
 			<tbody>
 				<?php foreach ($store as $item): ?>
+				<?php if($item["user_id"]!==$_SESSION["id"]) :?>
 				<tr>
 					<td align="center">
 						<?= $item["title"] ?>
@@ -48,6 +49,7 @@
 						<?= $item["seller_info"] ?>
 					</td>
 				</tr>
+				<?php endif; ?>
 				<?php endforeach ?>
 			</tbody>
 		</table>
