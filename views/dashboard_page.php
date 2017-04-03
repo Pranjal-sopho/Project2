@@ -11,7 +11,7 @@
 <body>
 	<div class="tbl-header">
 		<h2>Items put on sale by you</h2>
-		<table align="center" id="pattern" summary="Meeting Results">
+		<table align="center">
 			<thead>
 				<tr>
 					<th scope="col">&emsp;Item&emsp;&emsp;</th>
@@ -20,7 +20,6 @@
 					<th scope="col">&emsp;College&emsp;&emsp;</th>
 					<th scope="col">&emsp;Category&emsp;&emsp;</th>
 					<th scope="col">&emsp;Date&emsp;&emsp;</th>
-					<th scope="col">&emsp;Seller&emsp;&emsp;</th>
 				</tr>
 			</thead>
 			<tbody>

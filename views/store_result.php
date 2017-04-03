@@ -12,7 +12,7 @@
 
 	<div class="tbl-header">
 		<h2>Items available for sale</h2>
-		<table align="center" id="pattern" summary="Meeting Results">
+		<table align="center">
 			<thead>
 				<tr>
 					<th scope="col">&emsp;Item&emsp;&emsp;</th>
