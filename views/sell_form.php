@@ -6,7 +6,7 @@
 </head>
 <body>
 	<div class="container-fluid">
-		<form method="post" action="sell.php" id="sell_form" enctype="multipart/form-data">
+		<form method="post" action="upload.php" id="sell_form" enctype="multipart/form-data">
 			<div>
 				<label><span class="required"></span></label>
 				<input type="text" id="name" name="title" placeholder="Title of the item" required="required" autofocus/>
@@ -37,7 +37,7 @@
 			</br>
 			<div>
 				<label>Image: <span class="required"></span></label>
-				<input type="file" name="myfile" id="fileToUpload" required="required"></br>
+				<input type="file" name="my_file" id="fileToUpload" required="required"></br>
 				<input type="submit" value="Upload Image" name="submit">
 			</div>
 

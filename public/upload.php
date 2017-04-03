@@ -43,6 +43,7 @@
             $sql = sprintf("INSERT INTO store (user_id,category,title,description,price,seller_info,images,college,date) 
                    VALUES('%s','%s','%s','%s','%s','%s','%s','%s','%s')",
                    $_SESSION["id"],$category,$title,$description,$price,$contact_info,$file_address,$college,date("d/m/Y"));
+            
             $bool = query($sql);
                    
             if(!$bool)
@@ -56,6 +57,6 @@
         }
         
         else
-            apologize("Image coudn't be uploaded, please try again");
+            apologize("Image couldn't be uploaded, please try again");
     }
 ?>
