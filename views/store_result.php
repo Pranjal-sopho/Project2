@@ -21,7 +21,7 @@
 					<th scope="col">&emsp;College&emsp;&emsp;</th>
 					<th scope="col">&emsp;Category&emsp;&emsp;</th>
 					<th scope="col">&emsp;Date&emsp;&emsp;</th>
-					<th scope="col">&emsp;Seller&emsp;&emsp;</th>
+					<th scope="col">&emsp;Seller Info&emsp;</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -34,7 +34,7 @@
 					<td align="center"><img id="myImage" src=""/>
 					</td>
 					<td align="center">
-						<?= number_format($item["price"], 2) ?>
+						INR&thinsp;<?= number_format($item["price"], 2) ?>
 					</td>
 					<td align="center">
 						<?=$item["college"]?>

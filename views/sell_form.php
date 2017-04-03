@@ -8,7 +8,7 @@
 	<div class="container-fluid">
 		<form method="post" action="sell.php" id="sell_form" enctype="multipart/form-data">
 			<div>
-				<label><span class="required"></span> &nbsp;</label>
+				<label><span class="required"></span></label>
 				<input type="text" id="name" name="title" placeholder="Title of the item" required="required" autofocus/>
 			</div>
 			<label for="subject"></label>
@@ -24,7 +24,7 @@
 			</select>
 			<div>
 				<label><span class="required"></span> </label>
-				<input type="number" id="price" name="price" placeholder="price" required="required"/>
+				<input type="number" id="price" name="price" placeholder="price(INR)" required="required"/>
 			</div>
 			<div>
 				<label><span class="required"></span></label>
@@ -38,7 +38,7 @@
 			<div>
 				<label>Image: <span class="required"></span></label>
 				<input type="file" name="myfile" id="fileToUpload" required="required"></br>
-				<input type="button" value="Upload Image" name="submit">
+				<input type="submit" value="Upload Image" name="submit">
 			</div>
 
 			<div>

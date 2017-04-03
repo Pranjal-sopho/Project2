@@ -171,9 +171,9 @@ header nav ul li a {
 }
 #pattern th {
 	font-size: 20px;
-	font-weight: normal;
+	font-weight: bold;
 	padding: 10px;
-	border-bottom: 1px solid #fff;
+	border-bottom: 1px solid #454;
 	color: #039;
 }
 #pattern td {
@@ -186,3 +186,11 @@ header nav ul li a {
 	color: #339;
 	background: #fff;
 }
+table{
+	border-collapse:collapse;
+}
+table, th, td{
+	border:1px solid black;
+}
+tr:nth-child(even) {background-color: #f2f2f2}
+

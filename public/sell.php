@@ -63,10 +63,5 @@
         }
     
     }
-=======
-            apologize("You must login or register to sell an item");
-    }
-       
-
->>>>>>> 50393f609f3d5ca7500f765795d89c853b7c4ebb
+      
 ?>
