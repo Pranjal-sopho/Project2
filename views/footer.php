@@ -52,8 +52,6 @@
 	line-height: 35px;
 }
 
-/* If you don't want the footer to be responsive, remove these media queries */
-
 @media (max-width: 600px) {
 
 	.footer-distributed .footer-left,
@@ -66,7 +64,7 @@
 
 			<div class="footer-left">
 				<p class="footer-links">
-					<a href="/">Home</a>
+					<a href="homepage.php">Home</a>
 					·
 					<a href="about.php">About</a>
 					·
