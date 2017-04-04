@@ -1,13 +1,12 @@
 <style>
 .footer-distributed{
-	position:absolute;
+	position:relative;
 	background-color: #292c2f;
 	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
 	width: 93%;
 	text-align: left;
 	font: normal 16px sans-serif;
 	padding: 45px 50px;
-	margin-bottom:0px;
 	bottom:0;
 }
 
@@ -47,7 +46,7 @@
 	background-color:  #33383b;
 	border-radius: 2px;
 
-	font-size: 25Ipx;
+	font-size: 25px;
 	color: #ffffff;
 	text-align: center;
 	line-height: 35px;
@@ -69,7 +68,7 @@
 				<p class="footer-links">
 					<a href="/">Home</a>
 					·
-					<a href="#">About</a>
+					<a href="about.php">About</a>
 					·
 					<a href="https://www.linkedin.com/in/sanjay-khadda-65b298120/" target="_blank">Contact Sanjay</a>
 					·
@@ -80,3 +79,4 @@
 			</div>
 
 		</footer>
+		</html>
