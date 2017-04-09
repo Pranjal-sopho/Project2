@@ -23,7 +23,8 @@
             if(empty($row))
             {
                 // register new account in database
-                $bool = query("INSERT INTO users (username,password,email_id,sex,college) VALUES (\"".$_POST["username"]."\", \"".$_POST["password"]."\", \"".$_POST["email_id"]."\",\"".$_POST["radio-choice"]."\", \"".$_POST["college"]."\")");
+                $query="INSERT INTO users (username,password,email_id,sex,college) VALUES (\"".$_POST["username"]."\", \"".$_POST["password"]."\", \"".$_POST["email_id"]."\",\"".$_POST["radio-choice"]."\", \"".$_POST["college"]."\")";
+                $bool = query($query);
                 
                 if($bool === false)
                     apologize("Registration failed, Please try again");

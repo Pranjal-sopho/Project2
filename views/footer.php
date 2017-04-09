@@ -70,7 +70,7 @@
 					·
 					<a href="https://www.linkedin.com/in/sanjay-khadda-65b298120/" target="_blank">Contact Sanjay</a>
 					·
-					<a href="#" target="_blank">Contact Pranjal</a>
+					<a href="https://www.linkedin.com/in/pranjal-sharma-34b997113/" target="_blank">Contact Pranjal</a>
 				</p>
 
 				<p>ColX &copy; 2017</p>
