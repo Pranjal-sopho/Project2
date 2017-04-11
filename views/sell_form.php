@@ -37,7 +37,8 @@
 			</br>
 			<div>
 				<label>Image: <span class="required"></span></label>
-				<input type="file" name="my_file" id="fileToUpload" required="required"></br>
+				<input type="file" name="my_file" id="fileToUpload" required="required">
+				</br>
 				<input type="submit" value="Upload Image" name="submit">
 			</div>
 
@@ -47,9 +48,9 @@
 			</div>
 			<div>
 			</div>
-			
-	<div>
-		<input type="submit" value="Put for sale" id="sell" class="button register"/>
-	</div>
+
+			<div>
+				<input type="submit" value="Put for sale" id="sell" class="button register"/>
+			</div>
 	</div>
 </body>

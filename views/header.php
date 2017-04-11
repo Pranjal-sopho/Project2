@@ -3,7 +3,7 @@
 </head>
 <header>
 	<div class="wrapper">
-		<a href="/"><img src="img/logo.png"/></a>
+		<a href="dashboard.php"><img src="img/logo.png"/></a>
 		<nav>
 			<ul>
 				<li><a href="store.php">Go to store</a> </li>

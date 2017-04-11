@@ -11,7 +11,7 @@
         $sale = query($sql);
         
         if($sale === false)
-            apologize("Could not fetch ur shop, Please try again");
+            apologize("You did not put anything on sale!");
        
         // render user's dashboard
         render("dashboard_page.php",["title" => "Dashboard","sale" => $sale]);

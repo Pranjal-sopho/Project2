@@ -23,7 +23,7 @@
 		</div>
 	</header>
 	<div class="container-fluid">
-		<form method="post" action="register.php" id="form">
+		<form method="post" action="register.php" id="register_form">
 			<div>
 				<label for="name"><span class="required"></span></label>
 				<input type="text" id="name" name="username" placeholder="Your name" required="required" autofocus/>

@@ -1,6 +1,6 @@
 <style>
 .footer-distributed{
-	position:relative;
+	position:absolute;
 	background-color: #292c2f;
 	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
 	width: 93%;
@@ -52,8 +52,6 @@
 	line-height: 35px;
 }
 
-/* If you don't want the footer to be responsive, remove these media queries */
-
 @media (max-width: 600px) {
 
 	.footer-distributed .footer-left,
@@ -66,13 +64,13 @@
 
 			<div class="footer-left">
 				<p class="footer-links">
-					<a href="/">Home</a>
+					<a href="homepage.php">Home</a>
 					·
 					<a href="about.php">About</a>
 					·
 					<a href="https://www.linkedin.com/in/sanjay-khadda-65b298120/" target="_blank">Contact Sanjay</a>
 					·
-					<a href="#" target="_blank">Contact Pranjal</a>
+					<a href="https://www.linkedin.com/in/pranjal-sharma-34b997113/" target="_blank">Contact Pranjal</a>
 				</p>
 
 				<p>ColX &copy; 2017</p>

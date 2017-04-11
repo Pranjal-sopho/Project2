@@ -9,8 +9,30 @@
 </head>
 
 <body>
+	<div class="wrapper">
+		<form action="filter.php" method="post" id="filter_items">
+			<nav>
+				<ul id="filter">
+					<li>
+						<select name="category" id="category_filter">
+							<option>Category filter</option>
+							<option value="Books">Books</option>
+							<option value="Clothing">Clothing</option>
+							<option value="Electronics">Electronics</option>
+							<option value="Sports">Sports</option>
+							<option value="Furniture">Furniture</option>
+							<option value="Vehicle">Vehicle</option>
+							<option value="Other">Others</option>
+						</select>
+						<input type="text" id="college_filter" name="college" placeholder="College filter" autofocus/>
+						<input type="submit" value="Filter" id="sell" class="button register"/>
+					</li>
+				</ul>
+			</nav>
+		</form>
+	</div>
 
-	<div class="tbl-header">
+	<div class="tbl-header" id="store_table">
 		<h2>Items available for sale</h2>
 		<table align="center">
 			<thead>
@@ -34,7 +56,8 @@
 					<td align="center"><img id="myImage" src=""/>
 					</td>
 					<td align="center">
-						INR&thinsp;<?= number_format($item["price"], 2) ?>
+						INR&thinsp;
+						<?= number_format($item["price"], 2) ?>
 					</td>
 					<td align="center">
 						<?=$item["college"]?>
