@@ -29,7 +29,7 @@
 					<td align="center">
 						<?= $item["title"] ?>
 					</td>
-					<td align="center"><img id="myImage" src="/img/"/>
+					<td align="center"><img id="myImage" src="/img/uploads/"/>
 					</td>
 					<td align="center">
 						<?= number_format($item["price"], 2) ?>
