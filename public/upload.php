@@ -32,7 +32,7 @@
             $sql = sprintf("INSERT INTO store (user_id,category,title,description,price,seller_info,images,college,date) 
                    VALUES('%s','%s','%s','%s','%s','%s','%s','%s','%s')",
                    $_SESSION["id"],$_POST["category"],$_POST["title"],$_POST["description"],$_POST["price"],$_POST["contact_info"],
-                   $_POST["target_path"],$_POST["college"],date("d/m/Y"));
+                   $target_path,$_POST["college"],date("d/m/Y"));
             
             $bool = query($sql);
                    
