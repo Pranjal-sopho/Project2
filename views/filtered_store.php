@@ -9,8 +9,9 @@
 </head>
 
 <body>
-	<div class="tbl-header">
-		<h2>Items put on sale by you</h2>
+	</br></br></br></br></br></br></br>
+	<div class="tbl-header" id="store_table">
+		<h2>Items available for sale in "<?=$_POST["category"]?>" category</h2>
 		<table align="center">
 			<thead>
 				<tr>
@@ -20,35 +21,40 @@
 					<th scope="col">&emsp;College&emsp;&emsp;</th>
 					<th scope="col">&emsp;Category&emsp;&emsp;</th>
 					<th scope="col">&emsp;Date&emsp;&emsp;</th>
+					<th scope="col">&emsp;Seller Info&emsp;</th>
 				</tr>
 			</thead>
 			<tbody>
-				<?php  if($sale!=NULL):?>
-				<?php foreach ($sale as $item): ?>
+				<?php foreach ($rows as $row): ?>
+				<?php if($row["user_id"]!==$_SESSION["id"]) :?>
 				<tr>
 					<td align="center">
-						<?= $item["title"] ?>
+						<?= $row["title"] ?>
 					</td>
-					<td align="center"><img style="width:150px; height:50px;"id="myImage" src="/img/uploads/The College Finder.gif"/>
-					</td>
-					<td align="center">
-						<?= number_format($item["price"], 2) ?>
+					<td align="center"><img id="myImage" src=""/>
 					</td>
 					<td align="center">
-						<?=$item["college"]?>
+						INR&thinsp;
+						<?= number_format($row["price"], 2) ?>
 					</td>
 					<td align="center">
-						<?= $item["category"]?>
+						<?=$row["college"]?>
 					</td>
 					<td align="center">
-						<?=$item["date"]?>
+						<?= $row["category"]?>
+					</td>
+					<td align="center">
+						<?=$row["date"]?>
+					</td>
+					<td align="center">
+						<?= $row["seller_info"] ?>
 					</td>
 				</tr>
+				<?php endif; ?>
 				<?php endforeach ?>
-				<?php endif?>
 			</tbody>
 		</table>
-
+	</div>
 </body>
 
 </html>
