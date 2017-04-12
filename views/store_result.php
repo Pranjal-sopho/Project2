@@ -24,7 +24,6 @@
 							<option value="Vehicle">Vehicle</option>
 							<option value="Other">Others</option>
 						</select>
-						<input type="text" id="college_filter" name="college" placeholder="College filter" autofocus/>
 						<input type="submit" value="Filter" id="sell" class="button register"/>
 					</li>
 				</ul>
