@@ -21,6 +21,7 @@
         if($result == false)
             apologize("Invalid email_id or password!!");
             
+        // check if entered password is the same as the stored one    
          if ($_POST["password"] === $result[0]["password"])
         {
             // remember that user is logged in by storing session id
@@ -29,6 +30,7 @@
             // logging in the user
             redirect("dashboard.php");
         }
+        
         else
         {
             apologize("email id or password is incorrect!");
